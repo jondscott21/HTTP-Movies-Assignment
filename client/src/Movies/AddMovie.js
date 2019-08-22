@@ -41,15 +41,15 @@ export default function AddMovie(props) {
         })
     }
     return (
-        <div>
+        <div className='form-wrapper'>
             <h1>Add a Movie!</h1>
-            <form onSubmit={handleSubmit}>
-                <input type='text' name='title' value={movie.title} onChange={handleChange} placeholder='Title'></input>
-                <input type='text' name='director' value={movie.director} onChange={handleChange} placeholder='Director'></input>
-                <input type='text' name='metascore' value={movie.metascore} onChange={handleChange} placeholder='Metascore'></input>
-                {movie.stars.map((star, idx) => <input key={idx} type='text' name='stars' value={star} onChange={(e) => starsChangeHandler(idx, e)} placeholder='Actors'></input>)}
-                <button onClick={addActors}>Add Actors Input</button>
-                <button>Add Movie</button>
+            <form className='form' onSubmit={handleSubmit}>
+                <input className='input-style' type='text' name='title' value={movie.title} onChange={handleChange} placeholder='Title'></input>
+                <input className='input-style' type='text' name='director' value={movie.director} onChange={handleChange} placeholder='Director'></input>
+                <input className='input-style' type='text' name='metascore' value={movie.metascore} onChange={handleChange} placeholder='Metascore'></input>
+                {movie.stars.map((star, idx) => <input className='input-style' key={idx} type='text' name='stars' value={star} onChange={(e) => starsChangeHandler(idx, e)} placeholder={`Actor ${idx + 1}`}></input>)}
+                <button className='form-btn actor-btn' onClick={addActors}>Add More Actors</button>
+                <button className='form-btn post-btn'>Add Movie</button>
             </form>
         </div>
     )

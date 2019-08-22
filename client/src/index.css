@@ -5,6 +5,11 @@ body {
   background-color: #f2f2f2;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -57,9 +62,12 @@ body {
   position: absolute;
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
+  border: none;
   padding: 5px 10px;
+  border-radius: 5px;
   background-color: lightseagreen;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
 }
 .save-button:hover {
   background-color: green;
@@ -68,7 +76,15 @@ body {
 
 .home-button {
   padding: 5px 10px;
+  border-radius: 5px;
   background-color: lightskyblue;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.home-button a {
+  text-decoration: none;
+  color: black;
 }
 
 .movie-warning {
@@ -76,12 +92,85 @@ body {
   text-align: center;
 }
 
+.add-button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  min-width: 60px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: lightskyblue;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
 .edit-button {
   position: absolute;
   min-width: 60px;
   top: 200px;
-  right: 25px;
-  border: 1px solid grey;
+  right: 100px;
+  border: none;
   padding: 5px 10px;
   background-color: dodgerblue;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.delete-button {
+  position: absolute;
+  min-width: 60px;
+  top: 200px;
+  right: 25px;
+  border: none;
+  padding: 5px 10px;
+  background-color: red;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  width: 30vw;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-style {
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-btn {
+  padding: 10px;
+  margin: 5px auto;
+  border: none;
+  border-radius: 5px;
+  width: 15vw;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.actor-btn {
+  background: lightskyblue;
+}
+
+.post-btn {
+  margin: 15px auto;
+  background: green
+}
+
+.movie-anchor {
+  text-decoration: none;
 }

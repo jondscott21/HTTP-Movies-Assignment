@@ -20,7 +20,7 @@ export default class MovieList extends Component {
   render() {
     return (
       <div className="movie-list">
-        <button className="" onClick={() => this.props.history.push(`/add-movie`)}>Add</button>
+        <button className="add-button" onClick={() => this.props.history.push(`/add-movie`)}>Add A Movie</button>
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}
@@ -31,7 +31,7 @@ export default class MovieList extends Component {
 
 function MovieDetails({ movie }) {
   return (
-    <Link to={`/movies/${movie.id}`}>
+    <Link className='link' to={`/movies/${movie.id}`}>
       <MovieCard movie={movie} />
     </Link>
   );
