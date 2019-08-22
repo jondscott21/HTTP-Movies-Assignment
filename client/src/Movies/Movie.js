@@ -13,7 +13,7 @@ export default class Movie extends React.Component {
     this.fetchMovie(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.fetchMovie(newProps.match.params.id);
     }
